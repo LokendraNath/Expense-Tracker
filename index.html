@@ -12,7 +12,7 @@
     <main>
       <header>
         <div>
-          <h5>Total Balance</h5>
+          <h5>Balance</h5>
           <span id="balance">&#8377; 0.00</span>
         </div>
         <div>
@@ -24,16 +24,8 @@
           <span id="expense">&#8377; 0.00</span>
         </div>
       </header>
-
-      <!-- Transection History -->
-      <section>
-        <h3>Transaction History</h3>
-        <ul id="transList"></ul>
-        <div id="status"></div>
-      </section>
-
       <!-- Transection Inputs -->
-      <section>
+      <section id="trx-input">
         <h2>Add Transaction</h2>
 
         <form id="transForm">
@@ -50,7 +42,7 @@
 
           <div>
             <label for="name">Name : </label>
-            <input type="text" name="name" required />
+            <input type="text" name="name" id="name" />
           </div>
           <div>
             <label for="amount">Amount : </label>
@@ -67,8 +59,14 @@
             <label for="date">Date : </label>
             <input type="date" name="date" required />
           </div>
-          <button type="submit">Submit</button>
+          <button class="submit-button" type="submit">Submit</button>
         </form>
+      </section>
+      <!-- Transection History -->
+      <section>
+        <h3>Transaction History</h3>
+        <ul id="transList"></ul>
+        <div id="status"></div>
       </section>
     </main>
 
