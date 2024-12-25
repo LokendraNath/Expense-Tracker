@@ -11,7 +11,7 @@ const formatToINR = (amount) => {
   return new Intl.NumberFormat("en-IN", {
     style: "currency",
     currency: "INR",
-    minimumFractionDigits: 1, // Decimal ke baad ek digit ke liye
+    minimumFractionDigits: 0, // Decimal ke baad ek digit ke liye
   }).format(amount);
 };
 
@@ -51,7 +51,7 @@ function renderList() {
       <p>${new Date(date).toLocaleDateString()}</p>
     </div>
     <div class="amount ${type}">
-      <span>${formatToINR(amount * sign)}</span>
+      <span class="rupees">${formatToINR(amount * sign)}</span>
     </div>
 
     <div class="action">
