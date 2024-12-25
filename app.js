@@ -83,8 +83,8 @@ function addTransaction(e) {
 
   const formData = new FormData(this);
 
-  transactions.push({
-    id: transactions.length + 1, // Unique ID
+  transactions.unshift({
+    id: transactions.length + 1,
     name: formData.get("name"),
     amount: Number(formData.get("amount")),
     date: new Date(formData.get("date")),

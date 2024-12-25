@@ -195,6 +195,9 @@ input#type {
   appearance: none;
   position: absolute;
 }
+input {
+  outline: none;
+}
 .option {
   display: flex;
   align-items: center;
@@ -221,7 +224,7 @@ input#type {
   transform: translateX(5px);
   border-radius: inherit;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  transition: all 500ms;
+  transition: all 400ms ease-in-out;
 }
 input#type:checked ~ .option::before {
   left: 50%;
