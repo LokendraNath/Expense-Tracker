@@ -83,7 +83,7 @@ function addTransaction(e) {
 
   const formData = new FormData(this);
 
-  transactions.unshift({
+  transactions.push({
     id: transactions.length + 1,
     name: formData.get("name"),
     amount: Number(formData.get("amount")),
